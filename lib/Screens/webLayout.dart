@@ -59,36 +59,59 @@ class WebScreenLayout extends StatelessWidget {
                   child: Row(
                     children: [
                       IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.emoji_emotions_outlined,
-                            color: Colors.grey,
-                          )),
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.emoji_emotions_outlined,
+                          color: Colors.grey,
+                        ),
+                        splashRadius: 20,
+                        tooltip: 'emoji',
+                      ),
                       IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.attach_file,
-                            color: Colors.grey,
-                          )),
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.attach_file,
+                          color: Colors.grey,
+                        ),
+                        tooltip: 'files',
+                      ),
                       Expanded(
                         child: Padding(
                           padding: EdgeInsets.only(left: 10, right: 15),
                           child: TextField(
                             decoration: InputDecoration(
-                              fillColor: searchBarColor,
-                              filled: true,
-                              hintText: "Type a message",
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                                borderSide: const BorderSide(
-                                  width: 0,
-                                  style: BorderStyle.none,
+                                fillColor: searchBarColor,
+                                filled: true,
+                                hintText: "Type a message",
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                  borderSide: const BorderSide(
+                                    width: 0,
+                                    style: BorderStyle.none,
+                                  ),
                                 ),
-                              ),
-                              contentPadding: const EdgeInsets.only(left: 20)
-                            ),
+                                contentPadding:
+                                    const EdgeInsets.only(left: 20)),
                           ),
                         ),
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.send,
+                          color: Colors.grey,
+                        ),
+                        splashRadius: 20,
+                        tooltip: 'send',
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.mic,
+                          color: Colors.grey,
+                        ),
+                        splashRadius: 20,
+                        tooltip: 'voice',
                       ),
                     ],
                   ),

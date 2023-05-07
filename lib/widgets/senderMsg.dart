@@ -42,11 +42,7 @@ class senMsg extends StatelessWidget {
                     SizedBox(
                       width: 5,
                     ),
-                    const Icon(//the blue tick
-                      Icons.done_all,
-                      size: 20,
-                      color: Colors.blue,
-                    ) 
+                    
                   ],
                 ),
               ),

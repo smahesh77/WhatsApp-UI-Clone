@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:whatsapp_ui_clone/colors.dart';
+import 'package:whatsapp_ui_clone/widgets/mobChatList.dart';
 
 import '../info.dart';
 
@@ -20,7 +21,10 @@ class conlist extends StatelessWidget {
           return Column(
             children: [
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => mobChat(name:info[index]['name'].toString())));
+                },
                 child: Padding(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: ListTile(
