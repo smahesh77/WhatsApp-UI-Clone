@@ -13,26 +13,29 @@ class WebScreenLayout extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Expanded(
-          child: Column(
-            children: [
-              //webprofilebar
-              //websearchbar
-              conlist(),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                //webprofilebar
+                //websearchbar
+                conlist(),
+              ],
+            ),
           ),
         ),
         //webScreen
         Container(
-  width: MediaQuery.of(context).size.width * 0.75,
-  decoration: BoxDecoration(
-    image: DecorationImage(
-      image: NetworkImage(
-        info.length > 1 ? info[1]['profilePic'].toString() : '',
-      ),
-      fit: BoxFit.cover,
-    ),
-  ),
-),
+          
+          width: MediaQuery.of(context).size.width * 0.75,
+          decoration: BoxDecoration(
+            color: Colors.grey[800]
+            // image: DecorationImage(
+            //   image: AssetImage('assets/imagesg/bg.png'),
+            //   fit: BoxFit.cover,
+            // ),
+          ),
+          child: Center(child: const Text('Chats are here')),
+        ),
       ],
     ));
   }

@@ -8,6 +8,7 @@ import '../colors.dart';
 class MobileScreenLayout extends StatelessWidget {
   const MobileScreenLayout({super.key});
 
+  
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -39,7 +40,7 @@ class MobileScreenLayout extends StatelessWidget {
             ],
             bottom: const TabBar(
               indicatorColor: tabColor,
-              indicatorWeight: 4,// to thicken the indicator
+              indicatorWeight: 2,// to thicken the indicator
               labelColor: tabColor,
               unselectedLabelColor: Colors.grey,// to make only the selected label green
               labelStyle: TextStyle(
@@ -50,10 +51,19 @@ class MobileScreenLayout extends StatelessWidget {
                 Tab(text: 'STATUS',),
                 Tab(text: 'CALLS',),
                 
-              ]),
+              ],
+              
+              ),
+
         ),
 
-        body: const conlist()
+        body: TabBarView(
+          children: [
+            const conlist(),
+            Scaffold(appBar: AppBar(title: Text("status"),),),
+            Scaffold(appBar: AppBar(title: Text("calls"),),)
+          ],
+        ),
 
         )
         );
